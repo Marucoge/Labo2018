@@ -34,6 +34,7 @@ namespace Labo {
             // 移動量を計算するクラスをそれぞれここで登録する。
             calculators = new List<IMovementCalculator3D>();
             calculators.Add(new GravityCalculator3D(detector));
+            calculators.Add(new WalkCalculator3D(this.gameObject));
         }
 
 
