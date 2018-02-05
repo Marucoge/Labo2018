@@ -12,6 +12,7 @@ namespace IntegratedInput{
         [SerializeField] private IntegratedButton IntegratedCrossButton;
         [SerializeField] private IntegratedButton IntegratedSquareButton;
         [SerializeField] private IntegratedButton IntegratedTriangleButton;
+        [SerializeField] private IntegratedButton IntegratedJumpButton;
 
         [SerializeField] private VirtualStick.VirtualStick LeftStick;       // 本当はインターフェイスで扱いたいが、インスペクタにはインターフェイスを表示できないので。
         [SerializeField] private VirtualStick.VirtualStick RightStick;
@@ -21,6 +22,7 @@ namespace IntegratedInput{
         public static ButtonState CrossButton { get; private set; }
         public static ButtonState SquareButton { get; private set; }
         public static ButtonState TriangleButton { get; private set; }
+        public static ButtonState JumpButton { get; private set; }
 
         public static Vector2 LeftStickInput { get; private set; }
         public static Vector2 RightStickInput { get; private set; }
@@ -32,6 +34,8 @@ namespace IntegratedInput{
             CrossButton = IntegratedCrossButton.Status;
             SquareButton = IntegratedSquareButton.Status;
             TriangleButton = IntegratedTriangleButton.Status;
+            JumpButton = IntegratedJumpButton.Status;
+
 
             LeftStickInput = LeftStick.StickInput;
             RightStickInput = RightStick.StickInput;
